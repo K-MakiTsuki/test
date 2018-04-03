@@ -35,7 +35,10 @@ public class StuList {
 	}
 	
 	public boolean isEmpty() {  
-		// todo
+		if(length==0)
+			return true;
+		else
+			return false;
 	}
 	
 	public boolean addStu(Student x) { 
