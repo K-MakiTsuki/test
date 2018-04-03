@@ -50,7 +50,11 @@ public class StuList {
 	}
 	
 	public Student removeStu(int index) {
-		// todo
+		int i;
+		for(i=index;i<length-1;i++)
+			stus[i]=stus[i+1];
+		length--;
+		return stus[0];
 	}
 	
 	public Student removeStu_id(int stuId) {
