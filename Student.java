@@ -23,12 +23,18 @@ public class Student {
     private void calcAverScore() {
 		Course temp;
 		double sum;
+		int num=0;
 		sum=0;
-		temp=report.next;
+		temp=report.getNext();
 		while(temp!=null)
 		{
-			sum+=temp.score;
+			num++;
+			sum+=temp.getScore();
 		}
+		if(num==0)
+			System.out.printf("ÔÝÎÞ³É¼¨\n");
+		else
+			averScore= (sum/num);
     }
 
     public String getName() {
