@@ -72,12 +72,26 @@ public class Student {
 		c.setCourseName(name);
 		c.setCourseHour(hour);
 		c.setScore(score);
+		c.setNext(null);
 		temp.setNext(c);
 		return true;
     }
 
     public boolean delCourse(String NO) {
-		// todo
+    	Course pre=report;
+    	Course temp=report.getNext();
+    	while((temp.getNext()!=null)&&(temp.getCourseNumber()!=NO))
+    	{
+    		pre=temp;
+    		temp=temp.getNext();
+    	}
+    	if(temp.getCourseNumber()==NO)
+    	{
+    		pre.setNext(temp.getNext());
+    		return true;
+    	}
+    	else
+    		return false;
     }
 
     public boolean updateCourse(String NO, double score) {
