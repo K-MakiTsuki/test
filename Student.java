@@ -125,7 +125,18 @@ public class Student {
     }
 
     public void printReport(String NO) {
-		// todo
+    	Course temp=report.getNext();
+    	while((temp.getNext()!=null)&&(temp.getCourseNumber()!=NO))
+    	{
+    		temp=temp.getNext();
+    	}
+    	if(temp.getCourseNumber()==NO)
+    	{
+    		System.out.printf(temp.getCourseNumber()+" name: "+temp.getCourseName()+" hour: "+temp.getCourseHour()+" score: "+temp.getScore()+"\n");
+
+    	}
+    	else
+    		System.out.printf("no found\n");
     }
 
 }
