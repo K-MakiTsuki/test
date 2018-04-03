@@ -30,6 +30,7 @@ public class Student {
 		{
 			num++;
 			sum+=temp.getScore();
+			temp=temp.getNext();
 		}
 		if(num==0)
 			System.out.printf("ÔÝÎÞ³É¼¨\n");
@@ -58,7 +59,21 @@ public class Student {
     }
 
     public boolean addCourse(String NO, String name, int hour, double score) {
-		// todo
+    	Course temp;
+		temp=report;
+		if(temp==null)
+			return false;
+		while(temp.getNext()!=null)
+		{
+			temp=temp.getNext();
+		}
+		Course c=new Course();
+		c.setCourseNumber(NO);
+		c.setCourseName(name);
+		c.setCourseHour(hour);
+		c.setScore(score);
+		temp.setNext(c);
+		return true;
     }
 
     public boolean delCourse(String NO) {
