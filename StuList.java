@@ -28,7 +28,10 @@ public class StuList {
 	}
 	
 	private boolean isOverflow() {  
-		// todo
+		if(length==DEFAULT_CAPACITY)
+			return true;
+		else
+			return false;
 	}
 	
 	public boolean isEmpty() {  
