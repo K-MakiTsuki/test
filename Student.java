@@ -110,7 +110,18 @@ public class Student {
     }
 
     public void printReport() {
-		// todo
+    	Course temp;
+		temp=report.getNext();
+		if(temp==null)
+			System.out.printf("no course!\n");
+		while(temp!=null)
+		{
+			
+			System.out.printf(temp.getCourseNumber()+" name: "+temp.getCourseName()+" hour: "+temp.getCourseHour()+" score: "+temp.getScore()+"\n");
+			
+			temp=temp.getNext();
+			
+		}
     }
 
     public void printReport(String NO) {
