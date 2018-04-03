@@ -79,7 +79,16 @@ public class StuList {
 	}
 	
 	public void sort() {
-		// todo
+		Student temp;
+		int i,j;
+		for(i=0;i<length;i++)
+			for(j=0;j<length-1;j++)
+				if(stus[j].getAverScore()<stus[j+1].getAverScore())
+				{
+					temp=stus[j];
+					stus[j]=stus[j+1];
+					stus[j+1]=temp;
+				}
 	}
 	
 	public void print() {
