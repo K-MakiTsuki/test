@@ -32,6 +32,7 @@ public class Student {
 			sum+=temp.getScore();
 			temp=temp.getNext();
 		}
+//		System.out.printf(name+"  "+sum+"\n");
 		if(num==0)
 			System.out.printf("ÔÝÎÞ³É¼¨\n");
 		else
@@ -74,6 +75,7 @@ public class Student {
 		c.setScore(score);
 		c.setNext(null);
 		temp.setNext(c);
+		calcAverScore();
 		return true;
     }
 
