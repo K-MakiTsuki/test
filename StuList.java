@@ -92,7 +92,10 @@ public class StuList {
 	}
 	
 	public void print() {
-		// todo
+		int i;
+		for(i=0;i<length;i++)
+			System.out.println(stus[i].getNO()+" "+stus[i].getName()+" "+stus[i].getAverScore());
+
 	}
 	
 }
