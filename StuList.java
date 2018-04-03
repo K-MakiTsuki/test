@@ -14,7 +14,8 @@ public class StuList {
 	 * Init the StuList using the default capacity
 	 */
 	public StuList() {
-		// todo
+		length=0;
+		stus=new Student[DEFAULT_CAPACITY];
 	}
 	
 	/**
@@ -22,7 +23,8 @@ public class StuList {
 	 * @param 
 	 */
 	public StuList(int cap) {
-		// todo
+		length=0;
+		stus=new Student[cap];
 	}
 	
 	private boolean isOverflow() {  
