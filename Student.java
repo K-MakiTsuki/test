@@ -95,7 +95,18 @@ public class Student {
     }
 
     public boolean updateCourse(String NO, double score) {
-		// todo
+    	Course temp=report.getNext();
+    	while((temp.getNext()!=null)&&(temp.getCourseNumber()!=NO))
+    	{
+    		temp=temp.getNext();
+    	}
+    	if(temp.getCourseNumber()==NO)
+    	{
+    		temp.setScore(score);
+    		return true;
+    	}
+    	else
+    		return false;
     }
 
     public void printReport() {
