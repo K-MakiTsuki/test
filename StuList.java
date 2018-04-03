@@ -42,7 +42,11 @@ public class StuList {
 	}
 	
 	public boolean addStu(Student x) { 
-		// todo
+		if(length>15)
+			return false;
+		stus[length]=x;
+		length++;
+		return true;
 	}
 	
 	public Student removeStu(int index) {
