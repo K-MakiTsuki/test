@@ -69,7 +69,13 @@ public class StuList {
 	}
 	
 	private int indexOf(int stuId) {
-		// todo
+		int i;
+		for(i=0;i<length;i++)
+			if(stus[i].getNO()==stuId)
+				break;
+		if(i!=length)
+			return i;
+		return -1;
 	}
 	
 	public void sort() {
